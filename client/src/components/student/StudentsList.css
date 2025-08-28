@@ -1,0 +1,210 @@
+/* Import the Orbitron font if you haven't already in your main CSS file */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+/* General styles for the container */
+.students-list-container {
+    font-family: "Orbitron", sans-serif;
+    color: white; /* Default text color for the component */
+    background-color: black;
+    padding: 40px 20px;
+}
+
+/* Header: "ALL STUDENTS" */
+.list-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.list-header h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: yellow;
+    letter-spacing: 0.05em; /* Adds a bit of spacing */
+}
+
+/* The yellow underline for the header */
+.list-header .underline {
+    height: 4px;
+    width: 100px;
+    margin: 12px auto 0;
+    background-color: yellow;
+    border: none;
+}
+
+/* Message for when there are no students */
+.no-students-container {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.no-students-message {
+    background-color: black;
+    border: 2px solid yellow;
+    border-radius: 16px;
+    padding: 32px;
+    max-width: 450px;
+    margin: 0 auto;
+    font-size: 1.125rem;
+    color: yellow;
+}
+
+/* Grid layout for the cards */
+.students-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 32px;
+}
+
+/* Responsive adjustments for the grid */
+@media (min-width: 768px) {
+    .students-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 1024px) {
+    .students-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Individual student card styling */
+.student-card {
+    background-color: black;
+    border: 2px solid yellow;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: border-color 0.3s ease;
+}
+
+.student-card:hover {
+    border-color: #fff; /* White border on hover adds a nice touch */
+}
+
+.student-card-content {
+    flex-grow: 1; /* This is key to pushing the buttons to the bottom */
+}
+
+.student-card h3 {
+    font-size: 1.25rem;
+    color: yellow;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+}
+
+.student-card .roll-number {
+    color: white;
+    font-family: monospace;
+    margin-bottom: 16px;
+}
+
+/* Rows for details like Email, Phone, etc. */
+.student-info-row {
+    display: flex;
+    margin-bottom: 8px;
+    font-size: 0.875rem;
+}
+
+.student-info-label {
+    color: white;
+    font-weight: 500;
+    width: 80px;
+    flex-shrink: 0;
+}
+
+.student-info-value {
+    color: yellow;
+    word-break: break-all; /* Prevents long emails from overflowing */
+}
+
+/* Meta info (ID, Created Date) at the bottom of the card */
+.card-meta-info {
+    font-size: 0.75rem;
+    color: #ccc;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid yellow;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.meta-row {
+    display: flex;
+    align-items: center;
+}
+
+.meta-label {
+    font-weight: bold;
+    color: white;
+    margin-right: 8px;
+}
+
+.meta-value {
+    font-family: monospace;
+    background-color: #222;
+    padding: 4px 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Container for the action buttons */
+.card-actions {
+    margin-top: auto; /* Pushes the buttons to the very bottom of the card */
+    padding-top: 24px;
+}
+
+.card-buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Make buttons sit side-by-side on larger screens */
+@media (min-width: 640px) {
+    .card-buttons-container {
+        flex-direction: row;
+    }
+}
+
+/* General button style */
+.card-button {
+    width: 100%;
+    padding: 10px 16px;
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* "EDIT" button style */
+.edit-button {
+    background-color: black;
+    color: white;
+    border: 2px solid yellow;
+}
+
+.edit-button:hover {
+    color: black;
+    background-color: yellow;
+}
+
+/* "DELETE" button style */
+.delete-button {
+    background-color: yellow;
+    color: black;
+}
+
+.delete-button:hover {
+    background-color: #fff; /* Using white for hover gives a clean look */
+    color: black;
+}

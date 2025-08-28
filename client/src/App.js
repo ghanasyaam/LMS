@@ -1,5 +1,5 @@
 import './App.css';
-import StudentsApp from './components/StudentForm';
+import StudentsApp from './components/student/StudentsApp';
 
 function App() {
   return (
