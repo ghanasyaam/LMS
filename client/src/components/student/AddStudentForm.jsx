@@ -1,5 +1,5 @@
 import React from "react";
-import "./StudentsApp.css"; // Import the same CSS file used by the parent
+import "./StudentsApp.css";
 
 export default function AddStudentForm({
   form,
